@@ -1,0 +1,75 @@
+
+
+#sqreTopLeft{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-top:100px;
+    margin-left:100px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    
+}
+#sqreTopRight{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-left: 200px;
+    margin-top: -100px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+#sqreBottomLeft{
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+    margin-left:100px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+
+}
+#sqreBottomRight{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-top: -100px;
+    margin-left: 200px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+body:hover #sqreBottomRight{
+    transform: rotate(90deg);
+    transform-origin:right bottom;
+    
+    
+}
+body:hover #sqreTopRight{
+    transform: rotate(-90deg);
+    transform-origin:right top;
+    
+    
+}
+body:hover #sqreBottomLeft{
+    transform: rotate(-90deg);
+    transform-origin:left bottom;
+    
+    
+}
+body:hover #sqreTopLeft{
+    transform: rotate(90deg);
+    transform-origin:left top;
+    
+    
+}
+p{
+    margin-top: -10px;
+    margin-left: 180px;
+    position:fixed;
+    z-index:-10 ;
+}
