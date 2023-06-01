@@ -1,0 +1,19 @@
+function createIncrement() {
+    let count=0;
+    function increment() {count++;}
+        let message=`Count is ${count}`;
+        console.log(message);
+        function log()
+    {
+    console.log(message);                                                                      }
+    return[increment,log]
+};
+const[increment,log] =createIncrement();
+increment();
+increment();
+increment();
+log();
+
+// ouput will be "Count is 0"
+// reason:- message variable gets the value only when createIncrenment() is called 
+// calling increment() will not increase the value of message variable 
