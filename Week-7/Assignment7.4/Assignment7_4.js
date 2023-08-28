@@ -41,4 +41,4 @@ function minVal(arr){
     }
   }
 return [min,index]  
-}
+} 
