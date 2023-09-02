@@ -1,0 +1,36 @@
+function threeSum(nums,target){
+    let results=[]
+
+    if(nums.length<3) {return results} // base condition if the length of array is less than 3 we cannot work further 
+    nums=nums.sort((a,b)=>a-b) //sorting the array
+
+    // initializing first pointer from start
+    for(i=0;i<nums.length-2;i++){
+        // check if we have seen the number before and skipping it 
+        if(i>0 && nums[i]===nums[i+1]) continue
+        let j=i+1 // second pointer which will move between i and k
+        let k=nums.length-1 // second pointer starting from the end
+
+        while(j<k){
+
+            let sum = nums[i] + nums [j] + nums [k]
+
+            if (sum === target){
+                results.push([nums[i],nums[j],nums[k]])
+                
+                // skipping the numbers if we have seen it before
+                while(nums[j] === nums[j+1]){j++}
+                while(nums[k] === nums[k+1]){k--}
+
+                j++
+                k--
+            }
+            else if (sum<target){j++}
+            else {k--}
+        }
+    }
+    return results
+}
+
+nums=[-1, 2, 1, -4]
+console.log(threeSum(nums,2))
